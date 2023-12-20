@@ -63,7 +63,7 @@ WHERE c.name = 'maxime laboriosam nostrum' AND es.vote >= 18;
 
 -- 2. Elencare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 
-SELECT *
+SELECT DISTINCT t.id, t.name, t.surname 
 FROM teachers t 
 JOIN course_teacher ct ON ct.teacher_id = t.id
 JOIN courses c ON c.id = ct.course_id 
